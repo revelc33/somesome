@@ -54,21 +54,24 @@ To test the application, open your browser and enter [http://127.0.0.1:81](http:
 
 ### Assets 
 
-
-├── backend/        (Clock service sources (Python/Flask), Dockerfile, and Kubernetes manifests.)
-│   ├── src/
-│   │   └── [backend service source code]
-│   ├── Dockerfile
-│   └── backend.yaml (Kubernetes manifest)
-├── frontend/       (Frontend sources , Dockerfile, and Kubernetes manifests.)
-│   ├── src/
-│   │   └── [frontend service source code]
-│   ├── Dockerfile
-│   └── frontend.yaml (Kubernetes manifest)
-└── scripts/        (Script for deploying locally in Docker with Docker run.)
-    ├── build-docker-and-deploy.sh (script to build Docker image and deploy locally)
-    ├── deploy-kubernetes.sh (script to deploy in Kubernetes)
-    └── launcher.sh  (The main script for full deployment.)
+|-- backend/        (Clock service sources (Python/Flask), Dockerfile, and Kubernetes manifests.)
+|   |-- src/
+|   |   |-- [backend service source code]
+|   |-- Dockerfile
+|   |-- backend.yaml (Kubernetes manifest)
+|
+|-- frontend/       (Frontend sources , Dockerfile, and Kubernetes manifests.)
+|   |-- src/
+|   |   |-- [frontend service source code]
+|   |-- Dockerfile
+|   |-- frontend.yaml (Kubernetes manifest)
+|
+|-- scripts/        (Script for deploying locally in Docker with Docker run.)
+|   |-- build-docker-and-deploy.sh (script to build Docker image and deploy locally)
+|   |-- deploy-kubernetes.sh (script to deploy in Kubernetes)
+|   |-- launcher.sh  (The main script for full deployment.)
+|
+|-- README.md (project documentation)
 
 
 
