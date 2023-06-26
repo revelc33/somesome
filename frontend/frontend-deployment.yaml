@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  labels:
+    app: frontend
+spec:
+  selector:
+    matchLabels:
+      app: frontend
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: frontend
+          image: maquema/frontend:hoy
+          imagePullPolicy: Always
+          env:
+            - name: BACKEND_DOMAIN
+              value: $BACKEND_DOMAIN
+          ports:
+            - containerPort: 8000
+          #resources:
+          #  requests:
+          #    memory: "100Mi"
+          #    cpu: "250m"
+          #  limits:
+          #    memory: "1024Mi"
+          #    cpu: "500m"    
+          #  readinessProbe: 
+          #   httpGet:
+          #     path: /index.html
+          #     port: 8000
+          #   initialDelaySeconds: 5
+          #   periodSeconds: 10
+          # livenessProbe: 
+          #   httpGet:
+          #     path: /index.html
+          #     port: 8000
+          #   initialDelaySeconds: 5
+          #   periodSeconds: 10
+
+
+
