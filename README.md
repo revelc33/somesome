@@ -54,6 +54,7 @@ To test the application, open your browser and enter [http://127.0.0.1:81](http:
 
 ### Assets 
 
+```bash
 |-- backend/        (Clock service sources (Python/Flask), Dockerfile, and Kubernetes manifests.)
 |   |-- src/
 |   |   |-- [backend service source code]
@@ -72,7 +73,7 @@ To test the application, open your browser and enter [http://127.0.0.1:81](http:
 |   |-- launcher.sh  (The main script for full deployment.)
 |
 |-- README.md (project documentation)
-
+```
 
 
 `Kubernetes Deployment (requires 'kubectl' pointing to the correct Kubernetes cluster and envsubst tool instlled) (tested in EKS and Minikube).`
